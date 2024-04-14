@@ -26,7 +26,7 @@ export const signin = async (req,res,next)=>{
        if(!isCorrect) return next(createError(400,"Wrong Credentials"))
 
        const token = jwt.sign({id:user._id},process.env.JWT)
-       //we may also use the -select to remove the password for reponse
+       //we may also use the -select to remove the password for response
        const {password,...others} = user._doc;
        res.cookie("access_token",token,{
         httpOnly:true
