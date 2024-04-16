@@ -38,7 +38,7 @@ app.use("/api/users",userRoutes)
 app.use("/api/videos",videoRoutes)
 app.use("/api/comments",commentRoutes)
 
-app.listen(8800,()=>{
+app.listen(process.env.PORT,()=>{
     connect()
     console.log("Connected at 8800");
 })
