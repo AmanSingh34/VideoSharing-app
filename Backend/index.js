@@ -19,7 +19,11 @@ const connect = ()=>{
         throw err;
     })
 }
-app.use(cors())
+app.use(cors({
+    origin:[""],
+    methods:["GET","POST","DELETE","PUT"],
+    credentials:true
+}))
 app.use(cookieParser())
 app.use(express.json())
 
