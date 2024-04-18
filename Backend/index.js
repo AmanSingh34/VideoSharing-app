@@ -20,7 +20,7 @@ const connect = ()=>{
     })
 }
 app.use(cors({
-    origin:[""],
+    origin:["https://frontend-46314byzk-aman-kumars-projects-ea181edb.vercel.app/"],
     methods:["GET","POST","DELETE","PUT"],
     credentials:true
 }))
